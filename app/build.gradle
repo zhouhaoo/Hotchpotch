@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.zhouhaoh.greeting'
+    id 'com.zhouhaoh.uploadapk'
+}
+
+android {
+    compileSdk rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.zhouhaoh.study"
+        minSdk rootProject.ext.android.minSdkVersion
+        targetSdk rootProject.ext.android.compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation androidx.coreKtx
+    implementation androidx.appcompat
+    implementation androidx.material
+    implementation androidx.constraintlayout
+    testImplementation testLib.junit
+    androidTestImplementation testLib.androidJunit
+    androidTestImplementation testLib.espresso
+}
+

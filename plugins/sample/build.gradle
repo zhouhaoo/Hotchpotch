@@ -1,0 +1,29 @@
+plugins {
+    id 'groovy'
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'java-gradle-plugin'
+}
+gradlePlugin {
+    plugins {
+        standaloneGradlePlugins {
+            id = 'com.zhouhaoh.greeting'
+            implementationClass = 'com.zhouhaoh.plugins.sample.SamplePlugin'
+        }
+    }
+}
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/central' }
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    gradlePluginPortal()
+    google()
+    mavenCentral()
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+dependencies {
+
+}
