@@ -1,19 +1,16 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'com.zhouhaoh.plugins.uploadapk'
 }
 
 android {
     compileSdk rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        applicationId "com.zhouhaoh.study"
         minSdk rootProject.ext.android.minSdkVersion
         targetSdk rootProject.ext.android.compileSdkVersion
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -32,6 +29,7 @@ android {
 }
 
 dependencies {
+
     implementation androidx.coreKtx
     implementation androidx.appcompat
     implementation androidx.material
@@ -39,6 +37,4 @@ dependencies {
     testImplementation testLib.junit
     androidTestImplementation testLib.androidJunit
     androidTestImplementation testLib.espresso
-    implementation project(path:':components:home')
 }
-

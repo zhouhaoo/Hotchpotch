@@ -7,8 +7,6 @@ pluginManagement {
         google()
         mavenCentral()
     }
-    includeBuild 'plugins/sample'
-    includeBuild 'plugins/upLoadApk'
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -20,7 +18,11 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "study"
+rootProject.name = "hotchpotch"
 include ':app'
 include ':basic:core'
+include ':basic:common'
+include ':basic:network'
 include ':components:home'
+include ':components:login'
+includeBuild 'plugins'
