@@ -1,0 +1,23 @@
+plugins {
+    id 'groovy'
+    id 'maven-publish'
+    id 'java-gradle-plugin'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+}
+group = "com.example"
+version = "1.0"
+gradlePlugin {
+    plugins {
+        standaloneGradlePlugins {
+            id = 'com.zhouhaoh.plugins.uploadapk'
+            implementationClass = 'com.zhouhaoh.plugins.upload.UploadApkPlugin'
+        }
+    }
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+dependencies {
+    implementation 'com.android.tools.build:gradle:7.1.2'
+}
