@@ -3,10 +3,6 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.zhouhaoh.plugins.uploadapk'
 }
-uploadApk {
-    apiKey "xxxxx"
-    appName "大杂烩"
-}
 android {
     compileSdk rootProject.ext.android.compileSdkVersion
     defaultConfig {
@@ -30,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -46,7 +42,8 @@ dependencies {
     testImplementation testLib.junit
     androidTestImplementation testLib.androidJunit
     androidTestImplementation testLib.espresso
-    implementation project(path: ':components:login')
-    implementation project(path: ':components:home')
+//    implementation project(path: ':components:login')
+//    implementation project(path: ':components:home')
+    implementation project(':flutter')
 }
 

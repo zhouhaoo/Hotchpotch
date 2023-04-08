@@ -9,13 +9,13 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
-        google()
-        mavenCentral()
+//        google()
+//        mavenCentral()
     }
 }
 rootProject.name = "hotchpotch"
@@ -26,3 +26,5 @@ include ':basic:network'
 include ':components:home'
 include ':components:login'
 includeBuild 'plugins'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(settingsDir.parentFile, 'flutter_module/.android/include_flutter.groovy'))
