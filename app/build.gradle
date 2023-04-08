@@ -3,7 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.zhouhaoh.plugins.uploadapk'
 }
-
+uploadApk {
+    apiKey "xxxxx"
+    appName "大杂烩"
+}
 android {
     compileSdk rootProject.ext.android.compileSdkVersion
     defaultConfig {
@@ -18,6 +21,10 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -39,6 +46,7 @@ dependencies {
     testImplementation testLib.junit
     androidTestImplementation testLib.androidJunit
     androidTestImplementation testLib.espresso
-    implementation project(path:':components:home')
+    implementation project(path: ':components:login')
+    implementation project(path: ':components:home')
 }
 

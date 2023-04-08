@@ -3,5 +3,6 @@
 package com.zhouhaoh.hotchpotch.sample
 
 
-fun String.toooo() {
+fun String.foo() {
+
 }
