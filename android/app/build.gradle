@@ -42,8 +42,8 @@ dependencies {
     testImplementation testLib.junit
     androidTestImplementation testLib.androidJunit
     androidTestImplementation testLib.espresso
-//    implementation project(path: ':components:login')
-//    implementation project(path: ':components:home')
+    implementation project(path: ':components:login')
+    implementation project(path: ':components:home')
     implementation project(':flutter')
 }
 

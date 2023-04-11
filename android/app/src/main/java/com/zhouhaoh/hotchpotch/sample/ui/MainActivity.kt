@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.bt_flutter).setOnClickListener {
             startActivity(
-                FlutterActivity.createDefaultIntent(this)
+                FlutterActivity.withCachedEngine("my_engine_id").build(this)
             )
         }
     }
+
 }

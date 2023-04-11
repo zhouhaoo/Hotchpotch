@@ -14,8 +14,8 @@ dependencyResolutionManagement {
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
-//        google()
-//        mavenCentral()
+        google()
+        mavenCentral()
     }
 }
 rootProject.name = "hotchpotch"
