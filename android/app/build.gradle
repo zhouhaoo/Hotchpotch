@@ -39,6 +39,9 @@ dependencies {
     implementation androidx.appcompat
     implementation androidx.material
     implementation androidx.constraintlayout
+
+    implementation libs.retrofit
+
     testImplementation testLib.junit
     androidTestImplementation testLib.androidJunit
     androidTestImplementation testLib.espresso

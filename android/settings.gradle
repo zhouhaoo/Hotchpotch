@@ -28,3 +28,4 @@ include ':components:login'
 includeBuild 'plugins'
 setBinding(new Binding([gradle: this]))
 evaluate(new File(settingsDir.parentFile, 'flutter_module/.android/include_flutter.groovy'))
+include ':apt:aptAnnotation'

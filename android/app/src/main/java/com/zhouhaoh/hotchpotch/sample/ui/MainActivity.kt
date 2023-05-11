@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.zhouhaoh.hotchpotch.sample.R
 import io.flutter.embedding.android.FlutterActivity
+import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
